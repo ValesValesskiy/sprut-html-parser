@@ -50,8 +50,6 @@ console.log(minify(stringifyHTMLNode({ node: root })));
 // <p attr="value" attr_2><a href="./link" />Some Text</p>
 ```
 
-Так можно обрабатывать различные этапы парсинга и возвращать из `find` то, что искать в строке дальше.
-
 <br>
 
 ## <span id="node-tree-handler">Использование nodeTreeHandler:</span>
