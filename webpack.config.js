@@ -5,7 +5,7 @@ module.exports = [
         entry: './src/index.ts',
         output: {
             path: path.resolve(__dirname, './dist'),
-			filename: 'index.bjs',
+			filename: 'index.b.js',
             library: {
                 type: 'umd'
             },

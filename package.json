@@ -1,6 +1,6 @@
 {
   "name": "sprut-html-parser",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.2",
   "description": "Простой html-парсер, средства обработки узлов и перевод узлов в строку",
   "keywords": [
     "parser",
@@ -15,7 +15,7 @@
   },
   "main": "dist/index.bjs",
   "exports": {
-    ".": "./dist/index.bjs"
+    ".": "./dist/index.b.js"
   },
   "typesVersions": {
     "*": {
