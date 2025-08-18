@@ -1,0 +1,46 @@
+{
+  "name": "sprut-html-parser",
+  "version": "0.0.1-beta.1",
+  "description": "Простой html-парсер, средства обработки узлов и перевод узлов в строку",
+  "keywords": [
+    "parser",
+    "parsing",
+    "html"
+  ],
+  "author": "ValesValesskiy",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ValesValesskiy/sprut-html-parser.git"
+  },
+  "main": "dist/index.js",
+  "typesVersions": {
+    "*": {
+      "types": ["./dist/types.d.ts"]
+    }
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "types": "tsc ./src/index.ts --declaration --outDir dist/ --emitDeclarationOnly",
+    "readme_tests": "node ./buildTools/tasks/readme_tests/index.js",
+    "dist": "rm -rf dist && webpack --mode development && npm run types && npm run readme_tests"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.24.1",
+    "@babel/preset-env": "^7.24.3",
+    "babel-loader": "^9.1.3",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.9.2",
+    "webpack": "^5.101.2",
+    "webpack-cli": "^6.0.1"
+  },
+  "files": [
+    "dist",
+    "readme.md"
+  ],
+  "dependencies": {
+    "sprut-parser-builder": "^0.0.2-beta.3"
+  }
+}
