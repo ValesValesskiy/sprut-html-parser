@@ -118,11 +118,11 @@ console.log(getByTag('a', root));
 
 ```js
 Результат для строки html `<!DOCTYPE html>`: "<!DOCTYPE html>"
-Время выполнения: 0мс
+Время выполнения: 1мс
 ```
 ```js
 Результат для строки html `<p attr="value" attr_2><a href="./link" />Some Text</p>`: "<p attr="value" attr_2><a href="./link" />Some Text</p>"
-Время выполнения: 1мс
+Время выполнения: 0мс
 ```
 ```js
 Результат для строки html `<div><p>Some Text</p></div>`: "<div><p>Some Text</p></div>"

@@ -2,10 +2,38 @@ const path = require('path');
 
 module.exports = [
     {
-        target: 'node',
-        externalsPresets: {
-            node: true
+        entry: './src/index.ts',
+        output: {
+            path: path.resolve(__dirname, './dist'),
+			filename: 'index.bjs',
+            library: {
+                type: 'umd'
+            },
+            globalObject: `typeof self !== 'undefined' ? self : this`
         },
+        module: {
+			rules: [
+				{
+					test: /\.(ts)$/,
+					exclude: /node_modules/,
+					use: [
+                        'babel-loader',
+                        {
+                            loader: 'ts-loader',
+                            options: {
+                              transpileOnly: true,
+                            },
+                        }
+                    ]
+				}
+            ]
+        },
+        resolve: {
+            extensions: ['.ts']
+        },
+        externals: ['sprut-parser-builder']
+    },
+    {
         entry: './src/index.ts',
         output: {
             path: path.resolve(__dirname, './dist'),
@@ -33,7 +61,7 @@ module.exports = [
             ]
         },
         resolve: {
-            extensions: ['.ts', '.js']
+            extensions: ['.ts']
         }
-    },
+    }
 ]
