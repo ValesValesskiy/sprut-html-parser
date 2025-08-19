@@ -1,6 +1,6 @@
 {
   "name": "sprut-html-parser",
-  "version": "0.0.2-beta.2",
+  "version": "0.0.2-beta.4",
   "description": "Простой html-парсер, средства обработки узлов и перевод узлов в строку",
   "keywords": [
     "parser",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/ValesValesskiy/sprut-html-parser.git"
   },
-  "main": "dist/index.bjs",
+  "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.b.js"
   },
